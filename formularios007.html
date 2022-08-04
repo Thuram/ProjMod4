@@ -4,13 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay dey</title>
+    <title>Datalist & Text Area</title>
 </head>
 <body>
-    <form action="cadastro.php" method="post">
-        
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado</label>
+            <!-- Opções do deselvo -->
+        <select name="estado" id="iest">opções
+            <option value="" selected>--- Escolha ---</option>
+            <optgroup label="Região-Sudeste">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </optgroup>
+            <optgroup label="Região-Nordeste">
+                <option value="PE">Ceara</option>
+                <option value="BA">Bahia</option>
+                <option value="MA">Maranhão</option>
+            </optgroup>
+        </select>
 
+            
+        </p>
 
+        <p>
+            <label for="iprof">Profissão:</label>
+            <input type="tel" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof"> 
+                <!-- Sugestão caso não tenha sua opção -->
+                <option>Sexologo</option>
+                <option value="BQT">Boqueteiro</option>
+                <option value="CZ">Cuzeiro</option>
+                <option value="ESP">Espanholero</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10">
+Sua Mensagem...
+            </textarea>
+        </p>
+
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>
